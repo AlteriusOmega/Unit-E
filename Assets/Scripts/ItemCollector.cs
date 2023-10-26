@@ -9,6 +9,7 @@ public class ItemCollector : MonoBehaviour
     private int itemCount = 0;
 
     [SerializeField] private TextMeshProUGUI itemText;
+    [SerializeField] private AudioSource itemCollectSound;
 
     private string itemName = "Melons";
 
@@ -17,6 +18,7 @@ public class ItemCollector : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Melon"))
         {
+            itemCollectSound.Play();
             GameObject melon = collision.gameObject;
             Destroy(melon);
             itemCount++;
