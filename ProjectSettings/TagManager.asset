@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Melon
+  - Trap
   layers:
   - Default
   - TransparentFX
@@ -11,7 +13,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Ground
   - 
   - 
   - 
@@ -46,4 +48,7 @@ TagManager:
     locked: 0
   - name: Terrain
     uniqueID: 3242642631
+    locked: 0
+  - name: Midground
+    uniqueID: 699266299
     locked: 0
