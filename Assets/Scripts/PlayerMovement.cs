@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpSpeed = 7f;
     [SerializeField] private LayerMask jumpableGround;
     private enum AnimationState {idle, running, jumping, falling }
+
+    [SerializeField] private AudioSource jumpSound;
     private void Start()
     {
         Debug.Log("Testing start debug message!");
@@ -32,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
+            jumpSound.Play();
             rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
         }
 
